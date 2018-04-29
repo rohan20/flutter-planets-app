@@ -13,7 +13,15 @@ class GradientAppBar extends StatelessWidget {
       height: appBarHeight,
       decoration: new BoxDecoration(color: Colors.blue),
       child: new Center(
-        child: new Text(title),
+        child: new Text(
+            title,
+          style: new TextStyle(
+            color: Colors.white,
+            fontFamily: 'Poppins',
+            fontSize: 36.0,
+            fontWeight: FontWeight.w600,
+          ),
+        ),
       ),
     );
   }
