@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="930d4f53-e72c-4c22-9083-e29d491363a1" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/lib/model/Planet.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/model/PlanetDao.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/model/Planet.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/model/Planet.dart" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -38,11 +39,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Planet.dart" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/lib/model/Planet.dart">
+      <file leaf-file-name="PlanetDao.dart" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/lib/model/PlanetDao.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" column="21" selection-start-line="4" selection-start-column="21" selection-end-line="4" selection-end-column="21" />
+            <state relative-caret-position="465">
+              <caret line="47" column="45" lean-forward="true" selection-start-line="47" selection-start-column="45" selection-end-line="47" selection-end-column="45" />
             </state>
           </provider>
         </entry>
@@ -86,6 +87,14 @@
       </list>
     </option>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>assets/img/</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>assets/img/planet-</replace>
+    </replaceStrings>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -100,6 +109,7 @@
         <option value="$PROJECT_DIR$/lib/ui/home/PlanetRow.dart" />
         <option value="$PROJECT_DIR$/lib/ui/home/HomePage.dart" />
         <option value="$PROJECT_DIR$/lib/model/Planet.dart" />
+        <option value="$PROJECT_DIR$/lib/model/PlanetDao.dart" />
       </list>
     </option>
   </component>
@@ -129,6 +139,12 @@
               <item name="flutter_planets_app" type="b2602c69:ProjectViewProjectNode" />
               <item name="flutter_planets_app" type="462c0819:PsiDirectoryNode" />
               <item name="lib" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="flutter_planets_app" type="b2602c69:ProjectViewProjectNode" />
+              <item name="flutter_planets_app" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -342,8 +358,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/model/Planet.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="21" selection-start-line="4" selection-start-column="21" selection-end-line="4" selection-end-column="21" />
+        <state relative-caret-position="135">
+          <caret line="9" column="8" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/model/PlanetDao.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="47" column="45" lean-forward="true" selection-start-line="47" selection-start-column="45" selection-end-line="47" selection-end-column="45" />
         </state>
       </provider>
     </entry>
