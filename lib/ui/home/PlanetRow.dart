@@ -8,6 +8,7 @@ class PlanetRow extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
     final baseTextStyle = const TextStyle(fontFamily: 'Poppins');
 
     final headerTextStyle = baseTextStyle.copyWith(
@@ -23,6 +24,24 @@ class PlanetRow extends StatelessWidget {
     );
 
     final subHeaderTextStyle = regularTextStyle.copyWith(fontSize: 12.0);
+
+    Widget _setPlanetSubData(String dataValue, String imagePath) {
+      return new Row(
+        children: <Widget>[
+          new Image.asset(
+            imagePath,
+            height: 16.0,
+          ),
+          new Container(
+            width: 8.0,
+          ),
+          new Text(
+            dataValue,
+            style: regularTextStyle,
+          ),
+        ],
+      );
+    }
 
     final planetCardContent = new Container(
       margin: const EdgeInsets.fromLTRB(76.0, 16.0, 16.0, 16.0),
@@ -54,34 +73,9 @@ class PlanetRow extends StatelessWidget {
           new Row(
             children: <Widget>[
               new Expanded(
-                  child: new Row(
-                children: <Widget>[
-                  new Image.asset(
-                    "assets/img/ic_distance.png",
-                    height: 16.0,
-                  ),
-                  new Container(
-                    width: 8.0,
-                  ),
-                  new Text(
-                    planet.distance,
-                    style: regularTextStyle,
-                  ),
-                ],
-              )),
+                  child: _setPlanetSubData(planet.distance, "assets/img/ic_distance.png")),
               new Expanded(
-                  child: new Row(
-                children: <Widget>[
-                  new Image.asset("assets/img/ic_gravity.png", height: 16.0),
-                  new Container(
-                    width: 8.0,
-                  ),
-                  new Text(
-                    planet.gravity,
-                    style: regularTextStyle,
-                  ),
-                ],
-              ))
+                  child: _setPlanetSubData(planet.gravity, "assets/img/ic_gravity.png")),
             ],
           )
         ],
