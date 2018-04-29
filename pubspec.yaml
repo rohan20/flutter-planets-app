@@ -32,6 +32,8 @@ flutter:
       - assets/img/planet-mercury.png
       - assets/img/planet-moon.png
       - assets/img/planet-neptune.png
+      - assets/img/ic_gravity.png
+      - assets/img/ic_distance.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.io/assets-and-images/#resolution-aware.
