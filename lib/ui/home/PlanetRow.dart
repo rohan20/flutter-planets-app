@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 
 class PlanetRow extends StatelessWidget {
+
   @override
   Widget build(BuildContext context) {
+
     final planetCard = new Container(
       height: 124.0,
       margin: new EdgeInsets.only(left: 46.0),
