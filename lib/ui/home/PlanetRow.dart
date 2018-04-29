@@ -10,6 +10,26 @@ class PlanetRow extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
 
+    final baseTextStyle = const TextStyle(
+      fontFamily: 'Poppins'
+    );
+
+    final headerTextStyle = baseTextStyle.copyWith(
+      color: Colors.white,
+      fontSize: 18.0,
+      fontWeight: FontWeight.w600,
+    );
+
+    final regularTextStyle = baseTextStyle.copyWith(
+      color: Colors.white,
+      fontSize: 9.0,
+      fontWeight: FontWeight.w400,
+    );
+
+    final subHeaderTextStyle = regularTextStyle.copyWith(
+      fontSize: 12.0
+    );
+
     final planetCard = new Container(
       height: 124.0,
       margin: new EdgeInsets.only(left: 46.0),
