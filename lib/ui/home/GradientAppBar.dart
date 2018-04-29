@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 class GradientAppBar extends StatelessWidget {
-
   final String title;
   final double appBarHeight = 66.0;
 
@@ -9,12 +8,16 @@ class GradientAppBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
+    double statusBarHeight = MediaQuery.of(context).padding.top;
+
     return new Container(
-      height: appBarHeight,
+      padding: new EdgeInsets.only(top: statusBarHeight),
+      height: statusBarHeight + appBarHeight,
       decoration: new BoxDecoration(color: Colors.blue),
       child: new Center(
         child: new Text(
-            title,
+          title,
           style: new TextStyle(
             color: Colors.white,
             fontFamily: 'Poppins',
@@ -25,6 +28,4 @@ class GradientAppBar extends StatelessWidget {
       ),
     );
   }
-
-
 }
