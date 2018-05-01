@@ -6,7 +6,17 @@ class HomePageBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return new PlanetRow(PlanetDao.planets[1]);
+    return new Expanded(
+      child: new ListView(
+        children: <Widget>[
+          PlanetRow(PlanetDao.planets[0]),
+          PlanetRow(PlanetDao.planets[1]),
+          PlanetRow(PlanetDao.planets[2]),
+          PlanetRow(PlanetDao.planets[3]),
+          PlanetRow(PlanetDao.planets[4]),
+        ],
+      ),
+    );
   }
 
 }
