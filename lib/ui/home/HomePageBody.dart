@@ -10,10 +10,14 @@ class HomePageBody extends StatelessWidget {
     List<Planet> planets = PlanetDao.planets;
 
     return new Expanded(
-      child: new ListView.builder(
-        itemBuilder: (context, index) => new PlanetRow(planets[index]),
-        itemCount: planets.length,
-        scrollDirection: Axis.vertical,
+      child: new Container(
+        color: new Color(0xFF736AB7),
+        child: new ListView.builder(
+          itemBuilder: (context, index) => new PlanetRow(planets[index]),
+          itemCount: planets.length,
+          scrollDirection: Axis.vertical,
+          padding: new EdgeInsets.symmetric(vertical: 16.0),
+        ),
       ),
     );
   }
