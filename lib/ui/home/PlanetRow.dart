@@ -108,14 +108,17 @@ class PlanetRow extends StatelessWidget {
       ),
     );
 
-    return new Container(
-      height: 140.0,
-      margin: new EdgeInsets.symmetric(vertical: 30.0, horizontal: 24.0),
-      child: new Stack(
-        children: <Widget>[
-          planetCard,
-          planetThumbnail,
-        ],
+    return new GestureDetector(
+      onTap: () => Navigator.pushNamed(context, "/planets_detail_page"),
+      child: new Container(
+        height: 140.0,
+        margin: new EdgeInsets.symmetric(vertical: 30.0, horizontal: 24.0),
+        child: new Stack(
+          children: <Widget>[
+            planetCard,
+            planetThumbnail,
+          ],
+        ),
       ),
     );
   }
