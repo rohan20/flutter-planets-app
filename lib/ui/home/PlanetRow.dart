@@ -1,13 +1,21 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_planets_app/model/Planet.dart';
+import 'package:flutter_planets_app/model/PlanetDao.dart';
+import 'package:flutter_planets_app/ui/home/HomePageBody.dart';
 
-class PlanetRow extends StatelessWidget {
+class PlanetRow extends StatelessWidget  {
   final Planet planet;
 
+  HomePageBody homePageBody;
+//  PlanetDao planetDao;
   PlanetRow(this.planet);
 
   @override
   Widget build(BuildContext context) {
+
+    homePageBody = new HomePageBody();
+//    planetDao = new PlanetDao();
+//    planetDao.init();
 
     final baseTextStyle = const TextStyle(fontFamily: 'Poppins');
 
@@ -50,8 +58,21 @@ class PlanetRow extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
-          new Container(
-            height: 4.0,
+          new Row(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.end,
+            children: <Widget>[
+              new Container(
+                height: 4.0,
+              ),
+              new GestureDetector(
+                onTap: () => homePageBody.removeFromList(planet),
+                child: new Image.asset(
+                  "assets/img/ic_delete.png",
+                  height: 16.0,
+                ),
+              ),
+            ],
           ),
           new Text(
             planet.name,
@@ -83,7 +104,7 @@ class PlanetRow extends StatelessWidget {
     );
 
     final planetCard = new Container(
-      height: 152.0,
+      height: 154.0,
       margin: new EdgeInsets.only(left: 46.0),
       decoration: new BoxDecoration(
           color: new Color(0xFF333366),
@@ -109,9 +130,9 @@ class PlanetRow extends StatelessWidget {
     );
 
     return new GestureDetector(
-      onTap: () => Navigator.pushNamed(context, "/planets_detail_page"),
+//      onTap: () => Navigator.pushNamed(context, "/planets_detail_page"),
       child: new Container(
-        height: 140.0,
+        height: 142.0,
         margin: new EdgeInsets.symmetric(vertical: 30.0, horizontal: 24.0),
         child: new Stack(
           children: <Widget>[
@@ -122,4 +143,5 @@ class PlanetRow extends StatelessWidget {
       ),
     );
   }
+
 }
