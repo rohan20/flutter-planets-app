@@ -7,7 +7,12 @@ class PlanetsDetailPage extends StatelessWidget {
       appBar: new AppBar(
         title: new Text("Planet Detail"),
       ),
+      body: new Center(
+        child: new RaisedButton(
+          onPressed: () => Navigator.pop(context),
+          child: new Text("Back"),
+        ),
+      ),
     );
   }
-
 }
