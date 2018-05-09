@@ -13,7 +13,9 @@ class PlanetsDetailPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return new Scaffold(
       body: new Container(
+        constraints: new BoxConstraints.expand(),
         child: new Column(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             new Center(
               child: new Text(planet.name),
