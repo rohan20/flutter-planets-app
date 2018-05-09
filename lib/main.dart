@@ -7,8 +7,8 @@ void main() {
       debugShowCheckedModeBanner: false,
       title: "Planets",
       home: new HomePage(),
-      routes: <String, WidgetBuilder>{
-        '/planets_detail_page': (_) => new PlanetsDetailPage(),
-      }
+//      routes: <String, WidgetBuilder>{
+//        '/planets_detail_page': (_) => new PlanetsDetailPage(),
+//      }
   ));
 }

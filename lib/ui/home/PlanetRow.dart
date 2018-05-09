@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_planets_app/model/Planet.dart';
+import 'package:flutter_planets_app/ui/detail/PlanetsDetailPage.dart';
 
 class PlanetRow extends StatelessWidget {
   final Planet planet;
@@ -8,7 +9,6 @@ class PlanetRow extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-
     final baseTextStyle = const TextStyle(fontFamily: 'Poppins');
 
     final headerTextStyle = baseTextStyle.copyWith(
@@ -73,9 +73,11 @@ class PlanetRow extends StatelessWidget {
           new Row(
             children: <Widget>[
               new Expanded(
-                  child: _setPlanetSubData(planet.distance, "assets/img/ic_distance.png")),
+                  child: _setPlanetSubData(
+                      planet.distance, "assets/img/ic_distance.png")),
               new Expanded(
-                  child: _setPlanetSubData(planet.gravity, "assets/img/ic_gravity.png")),
+                  child: _setPlanetSubData(
+                      planet.gravity, "assets/img/ic_gravity.png")),
             ],
           )
         ],
@@ -109,7 +111,8 @@ class PlanetRow extends StatelessWidget {
     );
 
     return new GestureDetector(
-      onTap: () => Navigator.pushNamed(context, "/planets_detail_page"),
+      onTap: () => Navigator.of(context).push(new PageRouteBuilder(
+          pageBuilder: (_, __, ___) => new PlanetsDetailPage(planet))),
       child: new Container(
         height: 140.0,
         margin: new EdgeInsets.symmetric(vertical: 30.0, horizontal: 24.0),
