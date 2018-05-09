@@ -49,7 +49,7 @@ class PlanetDao {
 //    ),
 //  ];
 
-  PlanetDao(){
+  PlanetDao() {
     init();
   }
 
@@ -78,7 +78,8 @@ class PlanetDao {
       distance: "54.6m Km",
       gravity: "3.711 m/s ",
       description: "Lorem ipsum...",
-      image: "assets/img/planet-neptune.png",));
+      image: "assets/img/planet-neptune.png",
+    ));
 
     _items.add(new Planet(
       id: "3",
@@ -87,7 +88,8 @@ class PlanetDao {
       distance: "54.6m Km",
       gravity: "3.711 m/s ",
       description: "Lorem ipsum...",
-      image: "assets/img/planet-moon.png",));
+      image: "assets/img/planet-moon.png",
+    ));
 
     _items.add(new Planet(
       id: "4",
@@ -96,7 +98,8 @@ class PlanetDao {
       distance: "54.6m Km",
       gravity: "3.711 m/s ",
       description: "Lorem ipsum...",
-      image: "assets/img/planet-earth.png",));
+      image: "assets/img/planet-earth.png",
+    ));
 
     _items.add(new Planet(
       id: "5",
@@ -105,20 +108,16 @@ class PlanetDao {
       distance: "54.6m Km",
       gravity: "3.711 m/s ",
       description: "Lorem ipsum...",
-      image: "assets/img/planet-mercury.png",));
+      image: "assets/img/planet-mercury.png",
+    ));
   }
 
-  void deleteFromList(Planet toBeDeletedPlanet) {
+  void deleteFromList(Planet planet) {
+    print("Planets list: " + (_items).toString());
 
-    print("Planets list: " + (this._items).toString());
-
-//    if (_items.contains(planet))
-    for(Planet planet in this._items){
-      if(planet.id == toBeDeletedPlanet.id){
-        this._items.remove(toBeDeletedPlanet);
-        print("Delete id: " + planet.id);
-        break;
-      }
+    if (_items.contains(planet)) {
+      _items.remove(planet);
+      print("Delete id: " + planet.id);
     }
   }
 }

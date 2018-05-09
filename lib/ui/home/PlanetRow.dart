@@ -1,21 +1,23 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_planets_app/model/Planet.dart';
-import 'package:flutter_planets_app/model/PlanetDao.dart';
-import 'package:flutter_planets_app/ui/home/HomePageBody.dart';
+import 'package:meta/meta.dart';
 
 class PlanetRow extends StatelessWidget  {
+
   final Planet planet;
 
-  HomePageBody homePageBody;
-//  PlanetDao planetDao;
-  PlanetRow(this.planet);
+  ValueChanged<Planet> onDeleted;
+
+  PlanetRow({this.planet, @required this.onDeleted});
+
+  void _deletePlanet(){
+    print("Delete planet called");
+    onDeleted(planet);
+  }
+
 
   @override
   Widget build(BuildContext context) {
-
-    homePageBody = new HomePageBody();
-//    planetDao = new PlanetDao();
-//    planetDao.init();
 
     final baseTextStyle = const TextStyle(fontFamily: 'Poppins');
 
@@ -66,7 +68,7 @@ class PlanetRow extends StatelessWidget  {
                 height: 4.0,
               ),
               new GestureDetector(
-                onTap: () => homePageBody.removeFromList(planet),
+                onTap: () => _deletePlanet,
                 child: new Image.asset(
                   "assets/img/ic_delete.png",
                   height: 16.0,

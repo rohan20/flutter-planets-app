@@ -9,15 +9,12 @@ class HomePageBody extends State<HomePage> {
   PlanetDao planetDao;
 
   List<Planet> planets;
+  Planet currentPlanet;
 
   @override
   Widget build(BuildContext context) {
 
-    setState(() {
-      planetDao = new PlanetDao();
-    });
-
-//    planetDao.init();
+    planetDao = new PlanetDao();
     planets = planetDao.getItems();
 
     return new Scaffold(
@@ -27,11 +24,16 @@ class HomePageBody extends State<HomePage> {
           new Expanded(
             child: new Container(
               color: new Color(0xFF736AB7),
-              child: new ListView.builder(
-                itemBuilder: (context, index) => new PlanetRow(planets[index]),
-                itemCount: planets.length,
-                scrollDirection: Axis.vertical,
-                padding: new EdgeInsets.symmetric(vertical: 16.0),
+              child: new Container(
+                child: new ListView.builder(
+                  itemBuilder: (context, index) => new PlanetRow(
+                        planet: planets[index],
+                        onDeleted: _handlePlanetDeletion,
+                      ),
+                  itemCount: planets.length,
+                  scrollDirection: Axis.vertical,
+                  padding: new EdgeInsets.symmetric(vertical: 16.0),
+                ),
               ),
             ),
           ),
@@ -40,11 +42,14 @@ class HomePageBody extends State<HomePage> {
     );
   }
 
-  void removeFromList(Planet planet) {
+  void _handlePlanetDeletion(Planet planet) {
+    print("handlePlanetDeletion");
     planetDao.deleteFromList(planet);
+
     setState(() {
+      print("setState() called");
       planets = planetDao.getItems();
     });
-    print("Deleted");
+
   }
 }
