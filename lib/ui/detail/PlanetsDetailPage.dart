@@ -13,22 +13,27 @@ class PlanetsDetailPage extends StatelessWidget {
     return new Scaffold(
       body: new Container(
         constraints: new BoxConstraints.expand(),
-        child: new Column(
-          mainAxisAlignment: MainAxisAlignment.center,
+        color: new Color(0xFF736AB7),
+        child: new Stack(
           children: <Widget>[
-            new Center(
-              child: new Text(planet.name),
-            ),
-            new Hero(
-                tag: "planet-hero-${planet.id}",
-                child: new Image.asset(
-                  planet.image,
-                  height: 96.0,
-                  width: 96.0,
-                ))
+            _getBackground(),
+//            _getGradient(),
+//            __getContent(),
+//            _getToolbar(context),
           ],
         ),
       ),
+    );
+  }
+
+  Container _getBackground() {
+    return new Container(
+      child: new Image.network(
+        planet.pictureUrl,
+        height: 300.0,
+        fit: BoxFit.cover,
+      ),
+      constraints: BoxConstraints.expand(height: 300.0),
     );
   }
 }
