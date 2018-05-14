@@ -113,11 +113,9 @@ class PlanetDao {
   }
 
   void deleteFromList(Planet planet) {
-    print("Planets list: " + (_items).toString());
 
     if (_items.contains(planet)) {
       _items.remove(planet);
-      print("Delete id: " + planet.id);
     }
   }
 }

@@ -6,15 +6,15 @@ import 'package:flutter_planets_app/ui/home/HomePage.dart';
 import 'package:flutter_planets_app/ui/home/PlanetRow.dart';
 
 class HomePageBody extends State<HomePage> {
-  PlanetDao planetDao;
 
+  PlanetDao planetDao = new PlanetDao();
   List<Planet> planets;
+
   Planet currentPlanet;
 
   @override
   Widget build(BuildContext context) {
 
-    planetDao = new PlanetDao();
     planets = planetDao.getItems();
 
     return new Scaffold(
@@ -43,13 +43,10 @@ class HomePageBody extends State<HomePage> {
   }
 
   void _handlePlanetDeletion(Planet planet) {
-    print("handlePlanetDeletion");
     planetDao.deleteFromList(planet);
 
     setState(() {
-      print("setState() called");
       planets = planetDao.getItems();
     });
-
   }
 }

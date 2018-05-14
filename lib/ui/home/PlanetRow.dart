@@ -2,23 +2,19 @@ import 'package:flutter/material.dart';
 import 'package:flutter_planets_app/model/Planet.dart';
 import 'package:meta/meta.dart';
 
-class PlanetRow extends StatelessWidget  {
-
+class PlanetRow extends StatelessWidget {
   final Planet planet;
 
   ValueChanged<Planet> onDeleted;
 
   PlanetRow({this.planet, @required this.onDeleted});
 
-  void _deletePlanet(){
-    print("Delete planet called");
+  void _deletePlanet() {
     onDeleted(planet);
   }
 
-
   @override
   Widget build(BuildContext context) {
-
     final baseTextStyle = const TextStyle(fontFamily: 'Poppins');
 
     final headerTextStyle = baseTextStyle.copyWith(
@@ -67,11 +63,15 @@ class PlanetRow extends StatelessWidget  {
               new Container(
                 height: 4.0,
               ),
-              new GestureDetector(
-                onTap: () => _deletePlanet,
-                child: new Image.asset(
-                  "assets/img/ic_delete.png",
-                  height: 16.0,
+              new Container(
+                height: 16.0,
+                child: new IconButton(
+                  padding: new EdgeInsets.all(5.0),
+                  icon: new Icon(Icons.cancel),
+                  color: Colors.white,
+                  onPressed: () {
+                    _deletePlanet();
+                  },
                 ),
               ),
             ],
@@ -96,9 +96,11 @@ class PlanetRow extends StatelessWidget  {
           new Row(
             children: <Widget>[
               new Expanded(
-                  child: _setPlanetSubData(planet.distance, "assets/img/ic_distance.png")),
+                  child: _setPlanetSubData(
+                      planet.distance, "assets/img/ic_distance.png")),
               new Expanded(
-                  child: _setPlanetSubData(planet.gravity, "assets/img/ic_gravity.png")),
+                  child: _setPlanetSubData(
+                      planet.gravity, "assets/img/ic_gravity.png")),
             ],
           )
         ],
@@ -132,7 +134,7 @@ class PlanetRow extends StatelessWidget  {
     );
 
     return new GestureDetector(
-//      onTap: () => Navigator.pushNamed(context, "/planets_detail_page"),
+      onTap: planetTapped(context),
       child: new Container(
         height: 142.0,
         margin: new EdgeInsets.symmetric(vertical: 30.0, horizontal: 24.0),
@@ -146,4 +148,7 @@ class PlanetRow extends StatelessWidget  {
     );
   }
 
+  planetTapped(BuildContext context) {
+    () => Navigator.pushNamed(context, "/planets_detail_page");
+  }
 }
