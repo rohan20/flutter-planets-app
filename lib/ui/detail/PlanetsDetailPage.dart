@@ -17,7 +17,7 @@ class PlanetsDetailPage extends StatelessWidget {
         child: new Stack(
           children: <Widget>[
             _getBackground(),
-//            _getGradient(),
+            _getGradient(),
 //            __getContent(),
 //            _getToolbar(context),
           ],
@@ -34,6 +34,21 @@ class PlanetsDetailPage extends StatelessWidget {
         fit: BoxFit.cover,
       ),
       constraints: BoxConstraints.expand(height: 300.0),
+    );
+  }
+
+  _getGradient() {
+    return new Container(
+      margin: new EdgeInsets.only(top: 190.0),
+      height: 110.0,
+      decoration: new BoxDecoration(
+        gradient: new LinearGradient(
+          colors: <Color>[new Color(0x00736AB7), new Color(0xFF736AB7)],
+          stops: [0.0, 0.9],
+          begin: new Alignment(0.0, 0.0),
+          end: new Alignment(0.0, 1.0),
+        ),
+      ),
     );
   }
 }
