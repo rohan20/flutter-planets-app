@@ -2,10 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter_planets_app/model/Planet.dart';
 import 'package:flutter_planets_app/ui/detail/PlanetsDetailPage.dart';
 
-class PlanetRow extends StatelessWidget {
+class PlanetSummary extends StatelessWidget {
   final Planet planet;
+  final bool isHorizontalLayout;
 
-  PlanetRow(this.planet);
+  PlanetSummary(this.planet, {this.isHorizontalLayout = true});
+
+  PlanetSummary.vertical(this.planet) : isHorizontalLayout = false;
 
   @override
   Widget build(BuildContext context) {

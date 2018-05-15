@@ -13,7 +13,7 @@ class HomePageBody extends StatelessWidget {
       child: new Container(
         color: new Color(0xFF736AB7),
         child: new ListView.builder(
-          itemBuilder: (context, index) => new PlanetRow(planets[index]),
+          itemBuilder: (context, index) => new PlanetSummary(planets[index]),
           itemCount: planets.length,
           scrollDirection: Axis.vertical,
           padding: new EdgeInsets.symmetric(vertical: 16.0),
