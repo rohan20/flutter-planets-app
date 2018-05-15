@@ -18,7 +18,7 @@ class PlanetsDetailPage extends StatelessWidget {
           children: <Widget>[
             _getBackground(),
             _getGradient(),
-//            __getContent(),
+            __getContent(),
 //            _getToolbar(context),
           ],
         ),
@@ -49,6 +49,14 @@ class PlanetsDetailPage extends StatelessWidget {
           end: new Alignment(0.0, 1.0),
         ),
       ),
+    );
+  }
+
+  __getContent() {
+    return new ListView(
+      children: <Widget>[
+
+      ],
     );
   }
 }
