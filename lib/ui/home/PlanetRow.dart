@@ -47,11 +47,11 @@ class PlanetSummary extends StatelessWidget {
     }
 
     final planetCardContent = new Container(
-      margin: const EdgeInsets.fromLTRB(76.0, 16.0, 16.0, 16.0),
+      margin: new EdgeInsets.fromLTRB(isHorizontalLayout ? 76.0 : 16.0, isHorizontalLayout ? 16.0 : 42.0, 16.0, 16.0),
       constraints: new BoxConstraints.expand(),
       child: new Column(
         mainAxisAlignment: MainAxisAlignment.center,
-        crossAxisAlignment: CrossAxisAlignment.start,
+        crossAxisAlignment: isHorizontalLayout ? CrossAxisAlignment.start : CrossAxisAlignment.center,
         children: <Widget>[
           new Container(
             height: 4.0,
@@ -74,13 +74,20 @@ class PlanetSummary extends StatelessWidget {
             color: new Color(0xff00c6ff),
           ),
           new Row(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               new Expanded(
-                  child: _setPlanetSubData(
-                      planet.distance, "assets/img/ic_distance.png")),
+                child: _setPlanetSubData(
+                    planet.distance, "assets/img/ic_distance.png"),
+                flex: isHorizontalLayout ? 1 : 0,
+              ),
+              new Container(
+                width: 32.0,
+              ),
               new Expanded(
                   child: _setPlanetSubData(
-                      planet.gravity, "assets/img/ic_gravity.png")),
+                      planet.gravity, "assets/img/ic_gravity.png"),
+                  flex: isHorizontalLayout ? 1 : 0),
             ],
           )
         ],
@@ -105,7 +112,10 @@ class PlanetSummary extends StatelessWidget {
 
     final planetThumbnail = new Container(
       margin: new EdgeInsets.symmetric(vertical: 16.0),
-      alignment: FractionalOffset.centerLeft,
+      alignment: isHorizontalLayout
+          ? FractionalOffset.centerLeft
+          : FractionalOffset.center,
+//      alignment: FractionalOffset.centerLeft,
       child: new Hero(
         tag: "planet-hero-${planet.id}",
         child: new Image(
