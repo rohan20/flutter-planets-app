@@ -95,8 +95,8 @@ class PlanetSummary extends StatelessWidget {
     );
 
     final planetCard = new Container(
-      height: 152.0,
-      margin: new EdgeInsets.only(left: 46.0),
+      height: isHorizontalLayout ? 124.0 : 154.0,
+      margin: isHorizontalLayout ? new EdgeInsets.only(left: 46.0) : new EdgeInsets.only(top: 72.0),
       decoration: new BoxDecoration(
           color: new Color(0xFF333366),
           shape: BoxShape.rectangle,
