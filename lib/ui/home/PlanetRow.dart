@@ -47,11 +47,14 @@ class PlanetSummary extends StatelessWidget {
     }
 
     final planetCardContent = new Container(
-      margin: new EdgeInsets.fromLTRB(isHorizontalLayout ? 76.0 : 16.0, isHorizontalLayout ? 16.0 : 42.0, 16.0, 16.0),
+      margin: new EdgeInsets.fromLTRB(isHorizontalLayout ? 76.0 : 16.0,
+          isHorizontalLayout ? 16.0 : 42.0, 16.0, 16.0),
       constraints: new BoxConstraints.expand(),
       child: new Column(
         mainAxisAlignment: MainAxisAlignment.center,
-        crossAxisAlignment: isHorizontalLayout ? CrossAxisAlignment.start : CrossAxisAlignment.center,
+        crossAxisAlignment: isHorizontalLayout
+            ? CrossAxisAlignment.start
+            : CrossAxisAlignment.center,
         children: <Widget>[
           new Container(
             height: 4.0,
@@ -96,7 +99,9 @@ class PlanetSummary extends StatelessWidget {
 
     final planetCard = new Container(
       height: isHorizontalLayout ? 124.0 : 154.0,
-      margin: isHorizontalLayout ? new EdgeInsets.only(left: 46.0) : new EdgeInsets.only(top: 72.0),
+      margin: isHorizontalLayout
+          ? new EdgeInsets.only(left: 46.0)
+          : new EdgeInsets.only(top: 72.0),
       decoration: new BoxDecoration(
           color: new Color(0xFF333366),
           shape: BoxShape.rectangle,
@@ -127,8 +132,10 @@ class PlanetSummary extends StatelessWidget {
     );
 
     return new GestureDetector(
-      onTap: () => Navigator.of(context).push(new PageRouteBuilder(
-          pageBuilder: (_, __, ___) => new PlanetsDetailPage(planet))),
+      onTap: isHorizontalLayout
+          ? () => Navigator.of(context).push(new PageRouteBuilder(
+              pageBuilder: (_, __, ___) => new PlanetsDetailPage(planet)))
+          : null,
       child: new Container(
         height: 140.0,
         margin: new EdgeInsets.symmetric(vertical: 30.0, horizontal: 24.0),
