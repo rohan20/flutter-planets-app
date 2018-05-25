@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_planets_app/model/Planet.dart';
 import 'package:flutter_planets_app/ui/detail/PlanetsDetailPage.dart';
+import 'package:flutter_planets_app/widget/SeparatorFooter.dart';
 
 class PlanetSummary extends StatelessWidget {
   final Planet planet;
@@ -70,12 +71,7 @@ class PlanetSummary extends StatelessWidget {
             planet.location,
             style: subHeaderTextStyle,
           ),
-          new Container(
-            margin: const EdgeInsets.symmetric(vertical: 12.0),
-            height: 2.0,
-            width: 18.0,
-            color: new Color(0xff00c6ff),
-          ),
+          new SeparatorFooter(),
           new Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
