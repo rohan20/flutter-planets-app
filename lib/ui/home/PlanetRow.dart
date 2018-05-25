@@ -92,13 +92,13 @@ class PlanetSummary extends StatelessWidget {
                       planet.gravity, "assets/img/ic_gravity.png"),
                   flex: isHorizontalLayout ? 1 : 0),
             ],
-          )
+          ),
         ],
       ),
     );
 
     final planetCard = new Container(
-      height: isHorizontalLayout ? 124.0 : 154.0,
+      height: isHorizontalLayout ? 140.0 : 154.0,
       margin: isHorizontalLayout
           ? new EdgeInsets.only(left: 46.0)
           : new EdgeInsets.only(top: 72.0),
