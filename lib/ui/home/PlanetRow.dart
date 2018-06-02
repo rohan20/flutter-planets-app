@@ -94,7 +94,8 @@ class PlanetSummary extends StatelessWidget {
     );
 
     final planetCard = new Container(
-      height: isHorizontalLayout ? 140.0 : 154.0,
+      padding: isHorizontalLayout ? null : const EdgeInsets.only(bottom: 12.0),
+      height: isHorizontalLayout ? 140.0 : 172.0,
       margin: isHorizontalLayout
           ? new EdgeInsets.only(left: 46.0)
           : new EdgeInsets.only(top: 72.0),
