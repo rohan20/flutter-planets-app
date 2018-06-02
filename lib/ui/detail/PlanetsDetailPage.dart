@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_planets_app/model/Planet.dart';
 import 'package:flutter_planets_app/ui/home/PlanetRow.dart';
 import 'package:flutter_planets_app/widget/SeparatorFooter.dart';
-import 'package:path/path.dart';
 
 class PlanetsDetailPage extends StatelessWidget {
   Planet planet;
@@ -65,12 +64,19 @@ class PlanetsDetailPage extends StatelessWidget {
           isHorizontalLayout: false,
         ),
         new Container(
+          alignment: Alignment.centerLeft,
           padding: const EdgeInsets.symmetric(horizontal: 32.0),
           child: new Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
               new Text(
                 _overviewTitle,
-//                style: Style.headerTextStyle,
+                style: new TextStyle(
+                  fontSize: 20.0,
+                  fontFamily: 'Poppins',
+                  color: Colors.white,
+                  fontWeight: FontWeight.w400,
+                ),
               ),
               new SeparatorFooter(),
               new Text(
