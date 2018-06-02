@@ -112,11 +112,10 @@ class PlanetSummary extends StatelessWidget {
     );
 
     final planetThumbnail = new Container(
-      margin: new EdgeInsets.symmetric(vertical: 16.0),
+      margin: new EdgeInsets.symmetric(vertical: 24.0),
       alignment: isHorizontalLayout
           ? FractionalOffset.centerLeft
           : FractionalOffset.center,
-//      alignment: FractionalOffset.centerLeft,
       child: new Hero(
         tag: "planet-hero-${planet.id}",
         child: new Image(
@@ -133,8 +132,7 @@ class PlanetSummary extends StatelessWidget {
               pageBuilder: (_, __, ___) => new PlanetsDetailPage(planet)))
           : null,
       child: new Container(
-        height: 140.0,
-        margin: new EdgeInsets.symmetric(vertical: 30.0, horizontal: 24.0),
+        margin: new EdgeInsets.symmetric(vertical: 16.0, horizontal: 24.0),
         child: new Stack(
           children: <Widget>[
             planetCard,

@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_planets_app/model/Planet.dart';
+import 'package:flutter_planets_app/ui/home/PlanetRow.dart';
+import 'package:flutter_planets_app/widget/SeparatorFooter.dart';
+import 'package:path/path.dart';
 
 class PlanetsDetailPage extends StatelessWidget {
   Planet planet;
@@ -53,9 +56,29 @@ class PlanetsDetailPage extends StatelessWidget {
   }
 
   __getContent() {
+    final String _overviewTitle = "OVERVIEW";
     return new ListView(
+      padding: const EdgeInsets.fromLTRB(0.0, 72.0, 0.0, 32.0),
       children: <Widget>[
-
+        new PlanetSummary(
+          planet,
+          isHorizontalLayout: false,
+        ),
+        new Container(
+          padding: const EdgeInsets.symmetric(horizontal: 32.0),
+          child: new Column(
+            children: <Widget>[
+              new Text(
+                _overviewTitle,
+//                style: Style.headerTextStyle,
+              ),
+              new SeparatorFooter(),
+              new Text(
+                planet.description,
+              ),
+            ],
+          ),
+        ),
       ],
     );
   }
