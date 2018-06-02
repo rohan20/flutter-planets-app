@@ -72,7 +72,7 @@ class PlanetsDetailPage extends StatelessWidget {
               new Text(
                 _overviewTitle,
                 style: new TextStyle(
-                  fontSize: 20.0,
+                  fontSize: 26.0,
                   fontFamily: 'Poppins',
                   color: Colors.white,
                   fontWeight: FontWeight.w400,
@@ -81,6 +81,12 @@ class PlanetsDetailPage extends StatelessWidget {
               new SeparatorFooter(),
               new Text(
                 planet.description,
+                style: new TextStyle(
+                  fontSize: 14.0,
+                  color: const Color(0xffb6b2df),
+                  fontFamily: 'Poppins',
+                  fontWeight: FontWeight.w200,
+                ),
               ),
             ],
           ),
