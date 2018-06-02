@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="930d4f53-e72c-4c22-9083-e29d491363a1" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/lib/ui/detail/PlanetsDetailPage.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/ui/detail/PlanetsDetailPage.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/ui/home/PlanetRow.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/ui/home/PlanetRow.dart" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -14,11 +14,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="PlanetsDetailPage.dart" pinned="false" current-in-tab="true">
+      <file leaf-file-name="PlanetsDetailPage.dart" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/ui/detail/PlanetsDetailPage.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="617">
-              <caret line="85" column="49" selection-start-line="85" selection-start-column="49" selection-end-line="85" selection-end-column="49" />
+            <state relative-caret-position="282">
+              <caret line="38" column="6" lean-forward="true" selection-start-line="38" selection-start-column="6" selection-end-line="38" selection-end-column="6" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
@@ -26,11 +26,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PlanetRow.dart" pinned="false" current-in-tab="false">
+      <file leaf-file-name="PlanetRow.dart" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lib/ui/home/PlanetRow.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-180">
-              <caret line="96" column="40" selection-start-line="96" selection-start-column="40" selection-end-line="96" selection-end-column="40" />
+            <state relative-caret-position="131">
+              <caret line="97" column="46" selection-start-line="97" selection-start-column="46" selection-end-line="97" selection-end-column="46" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
@@ -74,6 +74,7 @@
       <find>[1</find>
       <find>desc</find>
       <find>[</find>
+      <find>planetCard</find>
     </findStrings>
     <replaceStrings>
       <replace>assets/img/planet-</replace>
@@ -102,9 +103,9 @@
         <option value="$PROJECT_DIR$/lib/ui/widgets/SeparatorFooter.dart" />
         <option value="$PROJECT_DIR$/lib/widget/SeperatorFooter.dart" />
         <option value="$PROJECT_DIR$/lib/widget/SeparatorFooter.dart" />
-        <option value="$PROJECT_DIR$/lib/ui/home/PlanetRow.dart" />
         <option value="$PROJECT_DIR$/lib/model/PlanetDao.dart" />
         <option value="$PROJECT_DIR$/lib/ui/detail/PlanetsDetailPage.dart" />
+        <option value="$PROJECT_DIR$/lib/ui/home/PlanetRow.dart" />
       </list>
     </option>
   </component>
@@ -291,7 +292,7 @@
       <window_info anchor="right" id="Capture Analysis" order="3" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32969698" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32969698" />
-      <window_info anchor="bottom" id="Terminal" order="7" weight="0.24121211" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.24121211" />
       <window_info id="Captures" order="2" weight="0.3297568" />
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49909583" visible="true" weight="0.25751072" />
       <window_info anchor="right" id="Theme Preview" order="3" />
@@ -626,16 +627,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/ui/home/PlanetRow.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-180">
-          <caret line="96" column="40" selection-start-line="96" selection-start-column="40" selection-end-line="96" selection-end-column="40" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/widget/SeparatorFooter.dart">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
@@ -659,8 +650,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/ui/detail/PlanetsDetailPage.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="617">
-          <caret line="85" column="49" selection-start-line="85" selection-start-column="49" selection-end-line="85" selection-end-column="49" />
+        <state relative-caret-position="282">
+          <caret line="38" column="6" lean-forward="true" selection-start-line="38" selection-start-column="6" selection-end-line="38" selection-end-column="6" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/ui/home/PlanetRow.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="131">
+          <caret line="97" column="46" selection-start-line="97" selection-start-column="46" selection-end-line="97" selection-end-column="46" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>
