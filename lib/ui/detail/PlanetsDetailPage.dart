@@ -21,7 +21,7 @@ class PlanetsDetailPage extends StatelessWidget {
             _getBackground(),
             _getGradient(),
             __getContent(),
-//            _getToolbar(context),
+            _getToolbar(context),
           ],
         ),
       ),
@@ -92,6 +92,15 @@ class PlanetsDetailPage extends StatelessWidget {
           ),
         ),
       ],
+    );
+  }
+
+  _getToolbar(BuildContext context) {
+    return Container(
+      margin: new EdgeInsets.only(top: MediaQuery.of(context).padding.top),
+      child: new BackButton(
+        color: Colors.white,
+      ),
     );
   }
 }
