@@ -34,7 +34,7 @@ class GradientAppBar extends StatelessWidget {
           style: new TextStyle(
             color: Colors.white,
             fontFamily: 'Poppins',
-            fontSize: 36.0,
+            fontSize: 28.0,
             fontWeight: FontWeight.w600,
           ),
         ),
