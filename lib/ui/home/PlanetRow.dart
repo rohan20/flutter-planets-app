@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_planets_app/model/Planet.dart';
 import 'package:flutter_planets_app/ui/detail/PlanetsDetailPage.dart';
+import 'package:flutter_planets_app/util/TextStyles.dart';
 import 'package:flutter_planets_app/widget/SeparatorFooter.dart';
 
 class PlanetSummary extends StatelessWidget {
@@ -13,21 +14,6 @@ class PlanetSummary extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final baseTextStyle = const TextStyle(fontFamily: 'Poppins');
-
-    final headerTextStyle = baseTextStyle.copyWith(
-      color: Colors.white,
-      fontSize: 18.0,
-      fontWeight: FontWeight.w600,
-    );
-
-    final regularTextStyle = baseTextStyle.copyWith(
-      color: Colors.white,
-      fontSize: 9.0,
-      fontWeight: FontWeight.w400,
-    );
-
-    final subHeaderTextStyle = regularTextStyle.copyWith(fontSize: 12.0);
 
     Widget _setPlanetSubData(String dataValue, String imagePath) {
       return new Row(
@@ -41,7 +27,7 @@ class PlanetSummary extends StatelessWidget {
           ),
           new Text(
             dataValue,
-            style: regularTextStyle,
+            style: TextStyles.regularTextStyle,
           ),
         ],
       );
@@ -62,14 +48,14 @@ class PlanetSummary extends StatelessWidget {
           ),
           new Text(
             planet.name,
-            style: headerTextStyle,
+            style: TextStyles.headerTextStyle,
           ),
           new Container(
             height: 10.0,
           ),
           new Text(
             planet.location,
-            style: subHeaderTextStyle,
+            style: TextStyles.subHeaderTextStyle,
           ),
           new SeparatorFooter(),
           new Row(
