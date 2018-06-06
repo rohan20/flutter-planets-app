@@ -16,4 +16,8 @@ class TextStyles {
   );
 
   static final subHeaderTextStyle = regularTextStyle.copyWith(fontSize: 12.0);
+
+  static final appBarTextStyle = headerTextStyle.copyWith(
+    fontSize: 28.0,
+  );
 }
