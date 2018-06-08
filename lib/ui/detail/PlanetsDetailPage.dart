@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_planets_app/model/Planet.dart';
 import 'package:flutter_planets_app/ui/home/PlanetRow.dart';
+import 'package:flutter_planets_app/util/TextStyles.dart';
 import 'package:flutter_planets_app/widget/SeparatorFooter.dart';
 
 class PlanetsDetailPage extends StatelessWidget {
@@ -71,22 +72,12 @@ class PlanetsDetailPage extends StatelessWidget {
             children: <Widget>[
               new Text(
                 _overviewTitle,
-                style: new TextStyle(
-                  fontSize: 26.0,
-                  fontFamily: 'Poppins',
-                  color: Colors.white,
-                  fontWeight: FontWeight.w400,
-                ),
+                style: TextStyles.regularTextStyle.copyWith(fontSize: 26.0),
               ),
               new SeparatorFooter(),
               new Text(
                 planet.description,
-                style: new TextStyle(
-                  fontSize: 14.0,
-                  color: const Color(0xffb6b2df),
-                  fontFamily: 'Poppins',
-                  fontWeight: FontWeight.w200,
-                ),
+                style: TextStyles.regularTextStyle.copyWith(fontSize: 14.0),
               ),
             ],
           ),
