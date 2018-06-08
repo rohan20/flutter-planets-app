@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_planets_app/model/Planet.dart';
 import 'package:flutter_planets_app/ui/detail/PlanetsDetailPage.dart';
+import 'package:flutter_planets_app/util/Navigator.dart';
 import 'package:flutter_planets_app/util/TextStyles.dart';
 import 'package:flutter_planets_app/widget/SeparatorFooter.dart';
 
@@ -14,7 +15,6 @@ class PlanetSummary extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-
     Widget _setPlanetSubData(String dataValue, String imagePath) {
       return new Row(
         children: <Widget>[
@@ -80,7 +80,9 @@ class PlanetSummary extends StatelessWidget {
     );
 
     final planetCard = new Container(
-      padding: isHorizontalLayout ? null : const EdgeInsets.only(top: 8.0, bottom: 12.0),
+      padding: isHorizontalLayout
+          ? null
+          : const EdgeInsets.only(top: 8.0, bottom: 12.0),
       height: isHorizontalLayout ? 140.0 : 180.0,
       margin: isHorizontalLayout
           ? new EdgeInsets.only(left: 46.0)
@@ -115,8 +117,7 @@ class PlanetSummary extends StatelessWidget {
 
     return new GestureDetector(
       onTap: isHorizontalLayout
-          ? () => Navigator.of(context).push(new PageRouteBuilder(
-              pageBuilder: (_, __, ___) => new PlanetsDetailPage(planet)))
+          ? () => RouteNavigator.navigateToDetailsPage(context, planet)
           : null,
       child: new Container(
         margin: new EdgeInsets.symmetric(vertical: 16.0, horizontal: 24.0),
